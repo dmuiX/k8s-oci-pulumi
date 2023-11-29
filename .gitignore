@@ -1,0 +1,12 @@
+# Devenv
+.devenv*
+.env
+devenv.local.nix
+devenv python
+flake
+# direnv
+.direnv
+
+# pre-commit
+.pre-commit-config.yaml
+
