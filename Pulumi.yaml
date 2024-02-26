@@ -1,0 +1,19 @@
+name: k8s-oci-pulumi
+runtime:
+  name: python
+description: k8s cluster on oci via pulumi and nix devenv
+config:
+  vm-count:
+    type: integer
+    description: the number of virtual machines to create
+    default: 4
+    
+    # subnets:
+    #     type: array
+    #     description: an array of subnets to create
+    #     items:
+    #         type: string
+    # vaultKey:
+    #     type: string
+    #     description: which vault key to use for this stack
+    #     secret: true

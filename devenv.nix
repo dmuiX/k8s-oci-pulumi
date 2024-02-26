@@ -19,16 +19,15 @@
     kubectx
     kubernetes-helm
     oci-cli
-    #python311Packages.oci
-    #pulumi
-    #python311Packages.pulumi
-    #pulumiPackages.pulumi-language-python
+    pulumi
+    python311Packages.oci
+    python311Packages.pulumi
+    pulumiPackages.pulumi-language-python
   ];
 
   dotenv.enable = true;
-  #starship.enable = true;
 
-  languages.nix.enable = true;
+  #languages.nix.enable = true;
   
   languages.python = {
     enable = true;
@@ -36,10 +35,15 @@
       enable = true;
       requirements = "
         pulumi
-        pulumi_oci
-        pip";
+        pulumi-oci
+        pip
+        grpcio==1.59.3
+        pylance
+        pylint
+        setuptools
+        ";
     };
-    #version = "3.12";
+    version = "3.11";
     #poetry = {
     #  activate.enable = true;
     #  install = {
